@@ -1,322 +1,333 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+/*==========================
+  RESET E ESTILO GLOBAL
+==========================*/
+* {
+  margin: 0; /* Remove margens padrão de todos os elementos */
+  padding: 0; /* Remove padding padrão */
+  box-sizing: border-box; /* Inclui padding e border no tamanho do elemento */
 }
 
-/*======= ESTILO GERAL ======= */
-
-body{
-	font-family: "Roboto", sans-serif;
-	font-weight: 300;
-	background-color: #fff;
-	color: #111;
-	line-height: 1.6;
+body {
+  font-family: "Roboto", sans-serif; /* Fonte principal do site */
+  font-weight: 300; /* Peso leve da fonte */
+  background-color: #fff; /* Cor de fundo branca */
+  color: #111; /* Cor do texto */
+  line-height: 1.6; /* Altura da linha para melhorar leitura */
 }
 
-
-h2{
-	font-family: "Ubuntu", sans-serif;
- 	font-weight: 700;
-  	font-style: normal;
+h2 {
+  font-family: "Ubuntu", sans-serif; /* Fonte específica para títulos h2 */
+  font-weight: 700; /* Negrito */
+  font-style: normal; /* Normaliza estilo de fonte */
 }
 
-/*======= CABEÇALHO ======= */
-
-.main-header{
-	background-color: #8000FF;
-	padding: 5px 40px; /*margem interna dos elementos*/
-	color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 5rem;
+/*==========================
+         CABEÇALHO
+==========================*/
+.main-header {
+  background-color: #8000FF; /* Fundo roxo */
+  padding: 5px 40px; /* Espaço interno vertical e horizontal */
+  color: #fff; /* Cor do texto */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Alinha verticalmente os itens */
+  justify-content: space-between; /* Espaça itens nas extremidades */
+  height: 5rem; /* Altura do cabeçalho */
 }
 
-.logo img{
-	max-height: 20px; /*define altura máxima da imagem*/
+.logo img {
+  max-height: 20px; /* Limita altura máxima da logo */
 }
 
-/*Menu de navegação*/
-
-.main-nav ul{
-	list-style: none; /*remove as bolinhas de uma lista não ordenada*/
-	display: flex;
-	gap: 40px; /*Distância entre os itens do menu (li)*/
-	align-items: center;
-	justify-content: center;
-}
-.main-nav li{
-	display: flex;
-	gap: 8px;
-	justify-content: center;
-	align-items: center;
-
-	& i{
-		font-size: 1.2rem;
-	}
+/* Menu de navegação */
+.main-nav ul {
+  list-style: none; /* Remove bolinhas da lista */
+  display: flex; /* Coloca os itens em linha */
+  gap: 40px; /* Espaço entre itens */
+  align-items: center; /* Alinhamento vertical */
+  justify-content: center; /* Centraliza horizontalmente */
 }
 
-.main-nav a{
-	color: #f5f5f5;
-	text-decoration: none;
-	font-weight: 500;
-	transition: 0.3s ease; /*aplica um efeito de transição ao hover*/
+.main-nav li {
+  display: flex; /* Flex para alinhar ícone e texto */
+  gap: 8px; /* Espaço entre ícone e texto */
+  justify-content: center; /* Centraliza horizontal */
+  align-items: center; /* Centraliza vertical */
+
+  & i {
+    font-size: 1.2rem; /* Tamanho dos ícones */
+  }
 }
 
-.main-nav a:hover{
-	color: #f0c330;
+.main-nav a {
+  color: #f5f5f5; /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: 500; /* Peso médio */
+  transition: 0.3s ease; /* Transição suave para hover */
+
+  &:hover {
+    color: #f0c330; /* Cor ao passar o mouse */
+  }
 }
 
+/*==========================
+        BANNER
+==========================*/
+.banner-content {
+  z-index: 2; /* Garante que fique acima de elementos de fundo */
+  padding: 20px; /* Espaçamento interno */
+  max-width: 800px; /* Largura máxima */
+  position: relative; /* Para posicionar elementos filhos */
 
-/*
-CONTEÚDO DO BANNER
-- TEXTO QUE APARECE EM CIMA DA FAIXA ESCURA
-*/
+  h1 {
+    font-size: 2.8rem; /* Tamanho do título */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+  }
 
-.banner-content{
-	z-index: 2;
-	padding: 20px;
-	max-width: 800px;
-	position: relative;
+  p {
+    font-size: 1.6rem; /* Tamanho do parágrafo */
+  }
 }
 
-.banner-content h1{
-	font-size: 2.8rem;
-	margin-bottom: 15px;
+/*==========================
+      SEÇÃO DE PESQUISA
+==========================*/
+.pesquisa {
+  width: 40%; /* Largura do campo de pesquisa */
+  height: 50%; /* Altura relativa */
+  border-radius: 6% / 100%; /* Bordas arredondadas */
+  overflow: hidden; /* Evita que conteúdo extrapole borda */
+  background-color: white; /* Fundo branco */
+  padding-left: 15px; /* Espaço interno à esquerda */
+
+  input {
+    background-color: white; /* Fundo do input */
+    width: 86.95%; /* Largura relativa */
+    height: 100%; /* Ocupa toda altura do container */
+    border: none; /* Remove borda */
+    outline: none; /* Remove contorno ao focar */
+    box-shadow: none; /* Remove sombra padrão */
+
+    &:focus {
+      border: none; /* Mantém sem borda ao focar */
+    }
+  }
+
+  button {
+    background-color: white; /* Fundo do botão */
+    border: none; /* Sem borda */
+    width: 10%; /* Largura do botão */
+    height: 100%; /* Altura total do container */
+    margin-left: 12px; /* Espaço entre input e botão */
+    cursor: pointer; /* Cursor de mão */
+    transition: 0.3s ease; /* Transição suave */
+
+    &:hover {
+      background-color: #3d0072; /* Cor ao passar mouse */
+      color: #f5f5f5; /* Cor do texto ao hover */
+    }
+  }
 }
 
-.banner-content p{
-	font-size: 1.6rem;
+/*==========================
+        SEÇÃO DE IMAGENS
+==========================*/
+main,
+.fotos {
+  display: flex; /* Flexbox para layout de imagens */
 }
 
-/*
-==========================
-		SEÇÃO DE PESQUISA
-==========================
-*/
-
-
-.pesquisa{
-	width: 40%;
-	height: 50%;
-	border-radius: 6% 6% 6% 6% / 100% 100% 100% 100%  ;
-	overflow: hidden;
-	background-color: white;
-	padding-left: 15px;
+.fotos {
+  justify-content: flex-start; /* Alinha imagens à esquerda */
+  align-items: flex-start; /* Alinha topo */
+  margin-top: 70px; /* Distância do topo */
 }
 
-.pesquisa input{
-	background-color: white;
-	width: 86.95%;
-	height: 100%;
-	border: none;
-	outline: none;
-	box-shadow: none;
+.miniaturas {
+  display: flex; /* Flex vertical */
+  flex-direction: column; /* Coluna */
+  padding-top: 100px; /* Espaço acima */
+  gap: 15px; /* Espaço entre miniaturas */
+
+  img {
+    width: 100px; /* Tamanho das miniaturas */
+    border-radius: 15px; /* Bordas arredondadas */
+    transition: all 0.3s ease-in-out; /* Suaviza animações */
+
+    &:hover {
+      border: 1px solid #8000FF; /* Borda roxa ao hover */
+      cursor: pointer; /* Mãozinha */
+      transform: scale(1.1); /* Aumenta miniatura */
+      box-shadow: -6px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+  }
 }
 
-.pesquisa button{
-	background-color: white;
-	border: none;
-	width: 10%;
-	height: 100%;
-	margin-left: 12px;
+.preview {
+  position: relative; /* Para posicionar elementos absolutos */
+
+  img {
+    width: 700px; /* Imagem principal */
+    margin-left: 10px; /* Espaço à esquerda */
+  }
 }
 
-.pesquisa button:hover {
-	background-color: #3d0072;
-	color: #f5f5f5;
+main {
+  padding: 5px 40px; /* Espaçamento interno */
+  gap: 180px; /* Espaço entre colunas */
 }
 
-.pesquisa input:focus {
-	border: none;
-}
-
-/*SEÇÃO IMAGENS*/
-
-main, .fotos{
-	display: flex;
-}
-
-.fotos{
-	justify-content: flex-start;
-	align-items: flex-start;
-	margin-top: 70px;
-	
-}
-
-.miniaturas{
-	display: flex;
-	flex-direction: column;
-	padding-top: 100px;
-	gap: 15px;
-}
-
-.miniaturas img{
-	width: 100px;
-	border-radius: 15px;
-	transition: all .3s ease-in-out;
-
-	&:hover{
-		border: 1px, solid #8000FF;
-		cursor: pointer;
-		scale: 1.1;
-		box-shadow: -6px 4px 10px 0 rgba(0, 0, 0, .2);
-
-	}
-}
-
-.preview img{
-	width: 700px;
-	margin-left: 10px;
-}
-
-main{
-	padding: 5px 40px;
-	gap: 180px;
-}
-
+/*==========================
+        BOTÃO CORAÇÃO
+==========================*/
 .coracao {
-	background-color: rgb(243, 243, 243);
-	width: 55px;
-	height: 55px;
-	border-radius: 100%;
-	position: absolute;
-	top: 3%;
-	left: 90%;
-	z-index: 3;
-	display: grid;
-	place-items: center;
-	font-size: 1.7rem;
-	font-weight: lighter;
-	color: #8000FF;
+  background-color: rgb(243, 243, 243); /* Fundo cinza claro */
+  width: 55px; /* Largura */
+  height: 55px; /* Altura */
+  border-radius: 100%; /* Círculo */
+  position: absolute; /* Posicionado no preview */
+  top: 3%; /* Distância do topo */
+  left: 90%; /* Distância da esquerda */
+  z-index: 3; /* Fica acima das imagens */
+  display: grid; /* Facilita centralizar conteúdo */
+  place-items: center; /* Centraliza ícone */
+  font-size: 1.7rem; /* Tamanho do ícone */
+  font-weight: lighter; /* Peso leve */
+  color: #8000FF; /* Cor do ícone */
 
-	&:hover{
-		cursor: pointer;
-		scale: 1.1;
-		transition: all .3s ease-in-out;
-	}
+  &:hover {
+    cursor: pointer; /* Mãozinha ao hover */
+    transform: scale(1.1); /* Aumenta botão */
+    transition: all 0.3s ease-in-out; /* Suaviza transformação */
+  }
 }
 
+/*==========================
+        DESCONTO
+==========================*/
 .desconto {
-	background-color: #e4ff2b; 
-	color: #000;               
-	font-weight: bold;
-	font-size: 14px;
-	padding: 6px 0;
-	width: 100%;
-	text-align: center;
-	position: absolute;
-	top: 90%;
-	left: 0;
-	z-index: 2;
+  background-color: #e4ff2b; /* Amarelo */
+  color: #000; /* Texto preto */
+  font-weight: bold; /* Negrito */
+  font-size: 14px; /* Tamanho do texto */
+  padding: 6px 0; /* Espaço vertical */
+  width: 100%; /* Largura total */
+  text-align: center; /* Centraliza texto */
+  position: absolute; /* Posicionado no preview */
+  top: 90%; /* Distância do topo */
+  left: 0; /* Alinhado à esquerda */
+  z-index: 2; /* Fica acima da imagem, abaixo do coração */
 }
 
-
-/*====== texto direito ======*/
-
-.dados h1{
-	line-height: 40px;
-
+/*==========================
+        DADOS DO PRODUTO
+==========================*/
+.dados {
+  h1 {
+    line-height: 40px; /* Espaçamento entre linhas */
+  }
 }
 
-.titulo{
-	margin-top: 80px;
-	font-weight: bold;
-}
+.titulo {
+  margin-top: 80px; /* Espaço acima do título */
+  font-weight: bold; /* Negrito */
 
-.titulo p{
-	margin-top: 30px;
-	font-size: 1.1rem;
+  p {
+    margin-top: 30px; /* Espaço acima do parágrafo */
+    font-size: 1.1rem; /* Tamanho do texto */
+  }
 }
 
 .under {
-	font-size: 1.1rem;
-	margin-bottom: 50px;
+  font-size: 1.1rem; /* Tamanho do texto */
+  margin-bottom: 50px; /* Espaço abaixo */
 }
 
-.tamanho button{
-	border: none;
-	margin-top: 10px;
-	padding: 5px;
-	width: 35px;
-	height: 35px;
-	border-radius: 20%;
-	margin-right: 10px;
+.tamanho {
+  button {
+    border: none; /* Sem borda */
+    margin-top: 10px; /* Espaço acima */
+    padding: 5px; /* Espaço interno */
+    width: 35px; /* Largura do botão */
+    height: 35px; /* Altura do botão */
+    border-radius: 20%; /* Bordas arredondadas */
+    margin-right: 10px; /* Espaço entre botões */
 
-	&:hover{
-		cursor: pointer;
-		scale: 1.1;
-		transition: all .3s ease-in-out;
-	}
+    &:hover {
+      cursor: pointer; /* Mãozinha */
+      transform: scale(1.1); /* Aumenta botão */
+      transition: all 0.3s ease-in-out; /* Suaviza efeito */
+    }
+  }
 }
 
+/*==========================
+            CORES
+==========================*/
+.flex-row {
+  button {
+    margin-top: 10px; /* Espaço acima */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    border-radius: 100%; /* Botão redondo */
+    margin-right: 10px; /* Espaço entre botões */
 
-.preview {
-	position: relative;
-}
-
-
-/*====== CORES ======*/
-.flex-row button{
-	margin-top: 10px;
-	width: 40px;
-	height: 40px;
-	border-radius: 100%;
-	margin-right: 10px;
-
-	&:hover{
-		transition: all .3s ease-in-out;
-		cursor: pointer;
-		scale: 1.1;
-	}
+    &:hover {
+      transition: all 0.3s ease-in-out; /* Suaviza efeito */
+      cursor: pointer; /* Mãozinha */
+      transform: scale(1.1); /* Aumenta botão */
+    }
+  }
 }
 
 button.branco {
-	background-color: #fff;
+  background-color: #fff; /* Branco */
 }
 
 button.preto {
-	background-color: #000;
+  background-color: #000; /* Preto */
 }
 
 button.cinza {
-	background-color: rgb(82, 82, 82);
+  background-color: #525252; /* Cinza escuro */
 }
 
-
-/*====== PREÇO ======*/
-
-
+/*==========================
+          PREÇO
+==========================*/
 .preco {
-	margin-top: 30px;
+  margin-top: 30px; /* Espaço acima */
+
+  h2 {
+    font-size: 15px; /* Tamanho do texto secundário */
+    color: rgb(107, 107, 107); /* Cinza */
+  }
+
+  h3 {
+    font-size: 2.2rem; /* Tamanho do preço */
+  }
 }
 
-.preco h2 {
-	font-size: 15px;
-	color: rgb(107, 107, 107);
-}
+/*==========================
+      BOTÃO DE COMPRA
+==========================*/
+.botaocompra {
+  button {
+    background-color: #8000FF; /* Fundo roxo */
+    color: #f5f5f5; /* Texto branco */
+    margin-top: 30px; /* Espaço acima */
+    width: 375px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    border-radius: 15% / 100%; /* Bordas arredondadas personalizadas */
+    font-size: 1.2rem; /* Tamanho do texto */
+    font-weight: bolder; /* Negrito */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Mãozinha */
+    transition: all 0.3s ease-in-out; /* Suaviza hover */
 
-.preco h3 {
-	font-size: 2.2rem;
-}
-
-.botaocompra button {
-	background-color: #8000FF;
-	color: #f5f5f5;
-	margin-top: 30px;
-	width: 375px;
-	height: 50px;
-	border-radius: 15% 15% 15% 15% / 100% 100% 100% 100%  ;
-	font-size: 1.2rem;
-	font-weight: bolder;
-	border: none;
-	
-	&:hover{
-		transition: all .3s ease-in-out;
-		background-color: #3d0072;
-		cursor: pointer;
-		scale: 1.02;
-		box-shadow: -6px 4px 10px 0 rgba(0, 0, 0, .2);
-	}
+    &:hover {
+      background-color: #3d0072; /* Escurece ao passar mouse */
+      transform: scale(1.02); /* Leve aumento */
+      box-shadow: -6px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao hover */
+    }
+  }
 }
