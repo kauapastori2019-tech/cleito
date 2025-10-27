@@ -1,0 +1,101 @@
+<!DOCTYPE html> <!-- Define que o documento usa a versão HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma principal da página como português do Brasil -->
+
+<head>
+	<meta charset="utf-8"> <!-- Define o conjunto de caracteres como UTF-8 (permite acentos) -->
+	<title>Cleitos-Roupas</title> <!-- Título exibido na aba do navegador -->
+
+	<!-- FOLHAS DE ESTILO -->
+	<link rel="stylesheet" type="text/css" href="normalize.css"> <!-- Normaliza o estilo padrão entre navegadores -->
+	<link rel="stylesheet" type="text/css" href="style.css"> <!-- Folha de estilo principal do site -->
+
+	<!-- FONTES DO GOOGLE -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Otimiza a conexão com o servidor de fontes -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Permite uso de fontes com CORS -->
+
+	<!-- ICONES (FONT AWESOME) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- Biblioteca de ícones (Facebook, Instagram, etc.) -->
+</head>
+
+<body> <!-- Corpo visível da página -->
+
+	<!-- ====== CABEÇALHO ====== -->
+	<header class="main-header"> <!-- Cabeçalho principal do site -->
+		<div class="logo"> <!-- Área da logomarca -->
+			<img src="https://static.netshoes.com.br/vue-components/7.6.0/netshoesbr/images/7ba374555872e98c911690fa95eae162.svg"> <!-- Imagem da logo -->
+		</div>
+    <div class="pesquisa">
+        <input type="text" placeholder="O que você está procurando?">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    
+		<nav class="main-nav"> <!-- Menu de navegação principal -->
+			<ul>
+                <li>
+                    <i class="fa-regular fa-heart"></i>
+                    <a href="listadedesejos.html">Lista de Desejos</a> <!-- Link para a página inicial -->
+                </li>
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <a href="entrar.html">Entrar</a> <!-- Link para a página "Sobre" -->
+                </li>
+                <li>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+			</ul>
+		</nav>
+	</header>
+
+    <!--Produto-->
+
+    <main>
+        <section class="fotos"> 
+            <div class="miniaturas">
+                <img src="./img/branco/front.webp" alt="Camisa Under Armour">
+                <img src="./img/branco/tras.webp" alt="Camisa Under Armour">
+                <img src="./img/branco/cara.webp" alt="Camisa Under Armour">
+            </div>
+			<div class="preview"> 
+					<img src="./img/branco/front.webp" alt="Camisa Under Armour">
+                    <div class="desconto">-23% OFF</div>
+                    <div class="coracao">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+				</div>
+        </section> 
+            <section class="dados">
+
+                <div class="titulo">
+                    <div class="under">
+                    <h1> Camisa Under Armour <br> Left Chest Masculino</h1>
+                    </div>
+                    <p><strong>Tamanho</strong></p>
+                    <div class="tamanho">
+                        <button>P</button>
+                        <button>M</button>
+                        <button>G</button>
+                        <button>GG</button>
+                    </div>
+                    <p><strong>Cor:</strong></p>
+                    <div class="flex-row">
+                        <button class="branco"></button>            
+                        <button class="preto"></button>            
+                        <button class="cinza"></button>               
+                    </div>
+                    <div class="preco"> 
+                        <h2>A partir de </h2>
+                        <h3><strong>R$ 99,99</h2></strong></h3>
+                    </div>
+                    <div class="botaocompra">
+                        <button>COMPRAR</button>
+                    </div>
+                </div>
+            </section>
+	</main>
+
+    
+    
+
+
+	
